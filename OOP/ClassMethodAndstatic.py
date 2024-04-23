@@ -17,6 +17,10 @@ class Member:
     @classmethod
     def show_users_count(cls):
         print(f"We Have {cls.users_num} Users In Our System.")
+    
+    @staticmethod
+    def say_hello():
+        print("Hello From Static Method")
 
     def full_name(self) :
         if self.fname in Member.not_allowed_names:
@@ -60,5 +64,7 @@ Member.show_users_count()
 
 print("#" * 50)
 
-print(Member_one.full_name())
-print(Member.full_name(Member_one))
+# print(Member_one.full_name())
+# print(Member.full_name(Member_one))
+
+Member.say_hello()
